@@ -32,8 +32,7 @@ public class GeoQuiz extends Activity {
 
     private void updateQuestion() {
         int question = mQuestionBank[mCurrentIndex].getQuestion();
-        Log.d(TAG, "Updating question text for question #" + mCurrentIndex,
-                new Exception());
+       // Log.d(TAG, "Updating question text for question #" + mCurrentIndex,new Exception());
         mQuestionTextView.setText(question);
     }
 
@@ -80,7 +79,7 @@ public class GeoQuiz extends Activity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
                 //int question = mQuestionBank[mCurrentIndex].getQuestion();
                // mQuestionTextView.setText(question);
                 updateQuestion();
